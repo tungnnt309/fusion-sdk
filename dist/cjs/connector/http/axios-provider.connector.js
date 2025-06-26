@@ -20,7 +20,7 @@ class AxiosProviderConnector {
             return res.data;
         }
         catch (error) {
-            if (axios_1.default.isAxiosError(error) && error.response?.status === 401) {
+            if (error.response?.status === 401) {
                 throw new errors_1.AuthError();
             }
             throw error;
@@ -38,7 +38,7 @@ class AxiosProviderConnector {
             return res.data;
         }
         catch (error) {
-            if (axios_1.default.isAxiosError(error) && error.response?.status === 401) {
+            if (error.response?.status === 401) {
                 throw new errors_1.AuthError();
             }
             throw error;
