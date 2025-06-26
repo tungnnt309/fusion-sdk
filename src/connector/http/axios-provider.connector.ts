@@ -1,4 +1,4 @@
-import axios, {isAxiosError} from 'axios'
+import axios from 'axios'
 import {HttpProviderConnector} from './http-provider.connector'
 import {AuthError} from '../../errors'
 
@@ -20,7 +20,8 @@ export class AxiosProviderConnector implements HttpProviderConnector {
 
             return res.data
         } catch (error) {
-            if (isAxiosError(error) && error.response?.status === 401) {
+            // eslint-disable-next-line import/no-named-as-default-member
+            if (axios.isAxiosError(error) && error.response?.status === 401) {
                 throw new AuthError()
             }
 
@@ -44,7 +45,8 @@ export class AxiosProviderConnector implements HttpProviderConnector {
 
             return res.data
         } catch (error) {
-            if (isAxiosError(error) && error.response?.status === 401) {
+            // eslint-disable-next-line import/no-named-as-default-member
+            if (axios.isAxiosError(error) && error.response?.status === 401) {
                 throw new AuthError()
             }
 
