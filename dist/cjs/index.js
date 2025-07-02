@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OrderStatus = exports.Quote = exports.Preset = exports.PresetEnum = exports.QuoterCustomPresetRequest = exports.RelayerRequest = exports.QuoterRequest = exports.MakerTraits = exports.LimitOrderContract = exports.getLimitOrderV4Domain = exports.AmountMode = exports.ExtensionBuilder = exports.TakerTraits = exports.Interaction = exports.getLimitOrderContract = exports.randBigInt = exports.Extension = exports.Address = void 0;
+exports.OrderStatus = exports.Quote = exports.Preset = exports.PresetEnum = exports.QuoterCustomPresetRequest = exports.RelayerRequest = exports.QuoterRequest = exports.Bps = exports.MakerTraits = exports.LimitOrderContract = exports.getLimitOrderV4Domain = exports.AmountMode = exports.ExtensionBuilder = exports.TakerTraits = exports.Interaction = exports.getLimitOrderContract = exports.randBigInt = exports.Extension = exports.Address = void 0;
 const tslib_1 = require("tslib");
 var limit_order_sdk_1 = require("@1inch/limit-order-sdk");
 Object.defineProperty(exports, "Address", { enumerable: true, get: function () { return limit_order_sdk_1.Address; } });
@@ -14,6 +14,7 @@ Object.defineProperty(exports, "AmountMode", { enumerable: true, get: function (
 Object.defineProperty(exports, "getLimitOrderV4Domain", { enumerable: true, get: function () { return limit_order_sdk_1.getLimitOrderV4Domain; } });
 Object.defineProperty(exports, "LimitOrderContract", { enumerable: true, get: function () { return limit_order_sdk_1.LimitOrderContract; } });
 Object.defineProperty(exports, "MakerTraits", { enumerable: true, get: function () { return limit_order_sdk_1.MakerTraits; } });
+Object.defineProperty(exports, "Bps", { enumerable: true, get: function () { return limit_order_sdk_1.Bps; } });
 tslib_1.__exportStar(require("./fusion-order/index"), exports);
 tslib_1.__exportStar(require("./amount-calculator/"), exports);
 tslib_1.__exportStar(require("./connector/index"), exports);

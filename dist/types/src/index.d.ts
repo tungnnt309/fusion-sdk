@@ -1,4 +1,4 @@
-export { Address, LimitOrderV4Struct, Extension, randBigInt, getLimitOrderContract, Interaction, TakerTraits, ExtensionBuilder, AmountMode, getLimitOrderV4Domain, LimitOrderContract, OrderInfoData, EIP712TypedData, MakerTraits } from '@1inch/limit-order-sdk';
+export { Address, LimitOrderV4Struct, Extension, randBigInt, getLimitOrderContract, Interaction, TakerTraits, ExtensionBuilder, AmountMode, getLimitOrderV4Domain, LimitOrderContract, OrderInfoData, EIP712TypedData, MakerTraits, Bps } from '@1inch/limit-order-sdk';
 export * from './fusion-order/index';
 export * from './amount-calculator/';
 export * from './connector/index';

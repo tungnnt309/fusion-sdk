@@ -12,7 +12,8 @@ export {
     LimitOrderContract,
     OrderInfoData,
     EIP712TypedData,
-    MakerTraits
+    MakerTraits,
+    Bps
 } from '@1inch/limit-order-sdk'
 export * from './fusion-order/index'
 export * from './amount-calculator/'
