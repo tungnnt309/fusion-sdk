@@ -10,6 +10,7 @@ export type QuoterRequestParams = {
     integratorFee?: IntegratorFeeParams;
     source?: string;
     isPermit2?: boolean;
+    slippage?: string;
 };
 export type QuoterRequestParamsRaw = Omit<QuoterRequestParams, 'integratorFee'> & {
     fee?: number;

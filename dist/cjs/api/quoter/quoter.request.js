@@ -14,6 +14,7 @@ class QuoterRequest {
         this.integratorFee = params.integratorFee;
         this.source = params.source || 'sdk';
         this.isPermit2 = params.isPermit2 ?? false;
+        this.slippage = params.slippage;
         if (this.fromTokenAddress.isNative()) {
             throw new Error(`cannot swap ${limit_order_sdk_1.Address.NATIVE_CURRENCY}: wrap native currency to it's wrapper fist`);
         }
@@ -44,7 +45,8 @@ class QuoterRequest {
             fee: Number(this.integratorFee?.value.value || 0),
             source: this.source,
             isPermit2: this.isPermit2,
-            surplus: true
+            surplus: true,
+            slippage: this.slippage
         };
     }
 }

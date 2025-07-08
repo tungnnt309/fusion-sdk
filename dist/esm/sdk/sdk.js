@@ -34,7 +34,8 @@ export class FusionSDK {
             enableEstimate: !!params.enableEstimate,
             source: params.source,
             isPermit2: params.isPermit2,
-            integratorFee: params.integratorFee
+            integratorFee: params.integratorFee,
+            slippage: params.slippage
         });
         return this.api.getQuote(request);
     }
@@ -48,7 +49,8 @@ export class FusionSDK {
             enableEstimate: !!params.enableEstimate,
             integratorFee: params?.integratorFee,
             source: params.source,
-            isPermit2: params.isPermit2
+            isPermit2: params.isPermit2,
+            slippage: params.slippage
         });
         const bodyRequest = QuoterCustomPresetRequest.new({
             customPreset: body.customPreset
@@ -72,7 +74,7 @@ export class FusionSDK {
             network: this.config.network
         });
         const hash = order.getOrderHash(this.config.network);
-        return { order, hash, quoteId: quote.quoteId };
+        return { order, hash, quoteId: quote.quoteId, quote };
     }
     async submitOrder(order, quoteId) {
         if (!this.config.blockchainProvider) {
@@ -126,7 +128,8 @@ export class FusionSDK {
             enableEstimate: true,
             source: params.source,
             isPermit2: params.isPermit2,
-            integratorFee: params?.integratorFee
+            integratorFee: params?.integratorFee,
+            slippage: params.slippage
         });
         if (!params.customPreset) {
             return this.api.getQuote(quoterRequest);

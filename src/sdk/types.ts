@@ -1,7 +1,7 @@
 import {LimitOrderV4Struct} from '@1inch/limit-order-sdk'
 import {BlockchainProviderConnector, HttpProviderConnector} from '../connector'
 import {NetworkEnum} from '../constants'
-import {CustomPreset, IntegratorFeeParams, PresetEnum} from '../api'
+import {CustomPreset, IntegratorFeeParams, PresetEnum, Quote} from '../api'
 import {FusionOrder} from '../fusion-order'
 
 export type FusionSDKConfigParams = {
@@ -22,6 +22,7 @@ export type QuoteParams = {
     integratorFee?: IntegratorFeeParams
     source?: string
     isPermit2?: boolean
+    slippage?: string
 }
 
 export type QuoteCustomPresetParams = {
@@ -56,6 +57,7 @@ export type OrderParams = {
      */
     allowMultipleFills?: boolean
     integratorFee?: IntegratorFeeParams
+    slippage?: string
 }
 
 export type OrderInfo = {
@@ -70,4 +72,5 @@ export type PreparedOrder = {
     order: FusionOrder
     hash: string
     quoteId: string
+    quote: Quote
 }
