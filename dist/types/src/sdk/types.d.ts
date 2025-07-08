@@ -20,6 +20,7 @@ export type QuoteParams = {
     integratorFee?: IntegratorFeeParams;
     source?: string;
     isPermit2?: boolean;
+    slippage: string;
 };
 export type QuoteCustomPresetParams = {
     customPreset: CustomPreset;
@@ -40,6 +41,7 @@ export type OrderParams = {
     allowPartialFills?: boolean;
     allowMultipleFills?: boolean;
     integratorFee?: IntegratorFeeParams;
+    slippage: string;
 };
 export type OrderInfo = {
     order: LimitOrderV4Struct;

@@ -22,6 +22,7 @@ export type QuoteParams = {
     integratorFee?: IntegratorFeeParams
     source?: string
     isPermit2?: boolean
+    slippage: string
 }
 
 export type QuoteCustomPresetParams = {
@@ -56,6 +57,7 @@ export type OrderParams = {
      */
     allowMultipleFills?: boolean
     integratorFee?: IntegratorFeeParams
+    slippage: string
 }
 
 export type OrderInfo = {

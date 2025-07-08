@@ -11,6 +11,7 @@ export declare class QuoterRequest {
     readonly integratorFee?: IntegratorFeeParams;
     readonly source: string;
     readonly isPermit2: boolean;
+    readonly slippage: string;
     constructor(params: QuoterRequestParams);
     static new(params: QuoterRequestParams): QuoterRequest;
     build(): QuoterRequestParamsRaw;
